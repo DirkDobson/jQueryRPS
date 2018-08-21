@@ -9,32 +9,30 @@ var user = ''
 var computer = ''
 var button = $('button')
 
+$rock.on('click', function() {
+  $('rock')
+  .animate({
+    height: '59%',
+    width: '59%',
+  }, 1)
+})
 
 
+ $paper.on('click', function() {
+  $('paper')
+  .animate({
+    height: '59%',
+    width: '59%',
+  }, 1)
+})
 
-    $rock.on('click', function() {
-      user = 'rock'
-      computer = computerSelection()
-      result = compare()
-      score[result]++
-      render()
-    })
-    $paper.on('click', function() {
-      user = 'paper'
-      computer = computerSelection()
-      result = compare()
-      score[result]++
-      render()
-    })
-    $scissors.on('click', function() {
-      user = 'scissors'
-      computer = computerSelection()
-      result = compare()
-      score[result]++
-      render()
-    })
-
-   
+ $scissors.on('click', function(){
+  $('rock')
+  .animate({
+    height: '59%',
+    width: '59%',
+  }, 1)
+})
 
 function computerSelection() {
   return options[Math.floor(Math.random() * options.length)]
@@ -60,7 +58,7 @@ function render() {
   win.innerHTML = 'Wins: ' + score.win
   lose.innerHTML = 'Losses: ' + score.lose
   tie.innerHTML = 'Ties: ' + score.tie
-  it.innerHTML = 'It Picked: ' + computer
+
 
 }
 
